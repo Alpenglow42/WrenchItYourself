@@ -8,12 +8,25 @@ body {
   background: #fafafa;
   max-width: 760px;
   margin: 0 auto;
-  padding: 2rem 1.5rem;
+  padding: 1.5rem 1.5rem 2rem;
+}
+
+/* Banner (site logo at top of every page) */
+.banner {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.banner img {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  display: inline-block;
 }
 
 /* Header */
 header {
-  border-bottom: 2px solid #222;
+  border-bottom: 2px solid #1a2a4a;
   padding-bottom: 1rem;
   margin-bottom: 2rem;
 }
@@ -21,12 +34,14 @@ header {
 header h1 {
   font-size: 2.25rem;
   letter-spacing: -0.02em;
+  color: #1a2a4a;
 }
 
 .tagline {
   color: #666;
   font-size: 1.05rem;
   margin-top: 0.25rem;
+  text-align: center;
 }
 
 /* Sections */
@@ -35,7 +50,7 @@ section { margin-bottom: 2.5rem; }
 h2 {
   font-size: 1.4rem;
   margin: 2rem 0 1rem 0;
-  color: #222;
+  color: #1a2a4a;
 }
 
 h3 {
@@ -55,7 +70,7 @@ h3 {
 .guide-list a {
   font-size: 1.15rem;
   font-weight: 600;
-  color: #0366d6;
+  color: #d9640f;
   text-decoration: none;
   display: block;
 }
@@ -70,7 +85,11 @@ h3 {
 }
 
 /* Article (guide pages) */
-article h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+article h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #1a2a4a;
+}
 article p, article li { margin-bottom: 0.75rem; }
 article ol, article ul { padding-left: 1.5rem; margin-bottom: 1rem; }
 
@@ -98,7 +117,7 @@ figcaption {
 /* Callout boxes */
 .callout {
   background: #fffbea;
-  border-left: 4px solid #e8a400;
+  border-left: 4px solid #d9640f;
   padding: 0.75rem 1rem;
   margin: 1.5rem 0;
   border-radius: 0 4px 4px 0;
@@ -111,7 +130,7 @@ figcaption {
 
 .callout.note {
   background: #f0f7ff;
-  border-left-color: #0366d6;
+  border-left-color: #1a2a4a;
 }
 
 .callout p:last-child { margin-bottom: 0; }
@@ -126,31 +145,4 @@ figcaption {
 
 .specs th, .specs td {
   text-align: left;
-  padding: 0.5rem 0.75rem;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-.specs th {
-  background: #f0f0f0;
-  font-weight: 600;
-}
-
-/* Back link */
-.back-link {
-  display: inline-block;
-  margin-bottom: 1.5rem;
-  color: #0366d6;
-  text-decoration: none;
-}
-
-.back-link:hover { text-decoration: underline; }
-
-/* Footer */
-footer {
-  margin-top: 3rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid #e0e0e0;
-  color: #888;
-  font-size: 0.9rem;
-  text-align: center;
-}
+  padding: 0.5rem
