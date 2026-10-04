@@ -1,148 +1,304 @@
-/* Reset + base */
+/* ===== Fonts ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Oswald:wght@500;600;700&display=swap');
+
+/* ===== Reset ===== */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #131720;
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(217, 109, 46, 0.1) 0%, transparent 60%),
+    radial-gradient(rgba(197, 160, 103, 0.03) 1px, transparent 0);
+  background-size: 100% 100%, 24px 24px;
+  color: #d8d4ca;
   line-height: 1.6;
-  color: #222;
-  background: #fafafa;
-  max-width: 760px;
+  min-height: 100vh;
+}
+
+/* ===== Nav Bar ===== */
+.nav-bar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(26, 32, 51, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid #2d3449;
+}
+
+.nav-container {
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 1.5rem 1.5rem 2rem;
+  padding: 0 1.5rem;
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
-/* Banner (site logo at top of every page) */
-.banner {
-  text-align: center;
-  margin-bottom: 1.5rem;
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: inherit;
 }
 
-.banner img {
-  max-width: 320px;
-  width: 100%;
-  height: auto;
-  display: inline-block;
+.nav-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
-/* Header */
-header {
-  border-bottom: 2px solid #1a2a4a;
-  padding-bottom: 1rem;
-  margin-bottom: 2rem;
+.nav-brand-text-wrap {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
 }
 
-header h1 {
-  font-size: 2.25rem;
-  letter-spacing: -0.02em;
-  color: #1a2a4a;
+.nav-brand-name {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #f5f1e8;
+  text-transform: uppercase;
+}
+
+.nav-brand-subtitle {
+  font-size: 0.65rem;
+  color: #C5A067;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.75rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #d8d4ca;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: #D96D2E; }
+
+/* ===== Content Container ===== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+
+/* ===== Page Header ===== */
+.page-header {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #2d3449;
+}
+
+.page-header h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #f5f1e8;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  margin-bottom: 0.75rem;
 }
 
 .tagline {
-  color: #666;
-  font-size: 1.05rem;
-  margin-top: 0.25rem;
-  text-align: center;
+  color: #9a9382;
+  font-size: 1.1rem;
 }
 
-/* Sections */
-section { margin-bottom: 2.5rem; }
+/* ===== Sections ===== */
+section { margin-bottom: 3rem; }
 
 h2 {
-  font-size: 1.4rem;
-  margin: 2rem 0 1rem 0;
-  color: #1a2a4a;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #f5f1e8;
+  letter-spacing: 0.03em;
+  margin: 2rem 0 1.25rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #D96D2E;
+  display: inline-block;
 }
 
 h3 {
-  font-size: 1.15rem;
-  margin: 1.5rem 0 0.5rem 0;
-  color: #333;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #f5f1e8;
+  letter-spacing: 0.02em;
+  margin: 1.5rem 0 0.5rem;
 }
 
-/* Guide list (used on homepage + bike pages) */
-.guide-list { list-style: none; }
+/* ===== Guide List Cards ===== */
+.guide-list {
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+}
 
 .guide-list li {
-  padding: 1rem 0;
-  border-bottom: 1px solid #e0e0e0;
+  background: #1e2535;
+  border: 1px solid #2d3449;
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  transition: all 0.2s;
+}
+
+.guide-list li:hover {
+  border-color: #D96D2E;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
 }
 
 .guide-list a {
-  font-size: 1.15rem;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.25rem;
   font-weight: 600;
-  color: #d9640f;
+  color: #D96D2E;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
   text-decoration: none;
   display: block;
+  margin-bottom: 0.35rem;
 }
 
-.guide-list a:hover { text-decoration: underline; }
+.guide-list a:hover { color: #E89060; }
 
 .desc {
   display: block;
-  color: #666;
+  color: #9a9382;
   font-size: 0.95rem;
-  margin-top: 0.25rem;
 }
 
-/* Article (guide pages) */
-article h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  color: #1a2a4a;
-}
-article p, article li { margin-bottom: 0.75rem; }
+/* ===== Articles ===== */
+article p, article li { margin-bottom: 0.85rem; color: #d8d4ca; }
 article ol, article ul { padding-left: 1.5rem; margin-bottom: 1rem; }
+article strong { color: #f5f1e8; }
 
-/* Figures (photos with captions) */
-figure {
-  margin: 1.5rem 0;
-}
+/* ===== Figures (photos) ===== */
+figure { margin: 1.75rem 0; }
 
 figure img {
   width: 100%;
   height: auto;
-  border-radius: 4px;
-  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  border: 1px solid #2d3449;
   display: block;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
 }
 
 figcaption {
   font-size: 0.9rem;
-  color: #666;
+  color: #9a9382;
   font-style: italic;
   text-align: center;
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
 }
 
-/* Callout boxes */
+/* ===== Callouts ===== */
 .callout {
-  background: #fffbea;
-  border-left: 4px solid #d9640f;
-  padding: 0.75rem 1rem;
+  background: rgba(217, 109, 46, 0.1);
+  border-left: 4px solid #D96D2E;
+  padding: 0.85rem 1.1rem;
   margin: 1.5rem 0;
-  border-radius: 0 4px 4px 0;
+  border-radius: 0 6px 6px 0;
 }
 
 .callout.warning {
-  background: #fff0f0;
-  border-left-color: #d14;
+  background: rgba(220, 38, 38, 0.1);
+  border-left-color: #c53030;
 }
 
 .callout.note {
-  background: #f0f7ff;
-  border-left-color: #1a2a4a;
+  background: rgba(197, 160, 103, 0.1);
+  border-left-color: #C5A067;
 }
 
 .callout p:last-child { margin-bottom: 0; }
 
-/* Specs table */
+/* ===== Specs Table ===== */
 .specs {
   width: 100%;
   border-collapse: collapse;
   margin: 1rem 0;
   font-size: 0.95rem;
+  background: #1e2535;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #2d3449;
 }
 
 .specs th, .specs td {
   text-align: left;
-  padding: 0.5rem
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid #2d3449;
+}
+
+.specs th {
+  background: #171c2a;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.85rem;
+  color: #C5A067;
+}
+
+.specs tr:last-child td { border-bottom: none; }
+
+/* ===== Back Link ===== */
+.back-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: #D96D2E;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.back-link:hover { color: #E89060; }
+
+/* ===== Footer ===== */
+footer {
+  margin-top: 4rem;
+  padding: 2rem 1.5rem;
+  border-top: 1px solid #2d3449;
+  color: #6b6659;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 640px) {
+  .nav-container { padding: 0 1rem; height: 64px; gap: 0.5rem; }
+  .nav-logo { width: 40px; height: 40px; }
+  .nav-brand-name { font-size: 1rem; }
+  .nav-brand-subtitle { display: none; }
+  .nav-links { gap: 1rem; }
+  .nav-links a { font-size: 0.7rem; letter-spacing: 0.05em; }
+  .page-header h1 { font-size: 2rem; }
+  .container { padding: 1.5rem 1rem; }
+}
