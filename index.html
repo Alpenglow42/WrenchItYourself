@@ -7,34 +7,51 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="banner">
-    <img src="images/logos/wiy-logo.jpg" alt="Wrench It Yourself logo">
-  </div>
 
-  <header>
-    <p class="tagline">Honest, step-by-step motorcycle repair and maintenance.</p>
-  </header>
-
-  <main>
-    <section>
-      <h2>Bikes</h2>
-      <ul class="guide-list">
-        <li>
-          <a href="bikes/cfmoto-650-adventura.html">CFMoto 650 Adventura / MT</a>
-          <span class="desc">Maintenance logs, repair guides, and notes.</span>
-        </li>
-        <!-- Add more bikes here as you cover them -->
+  <nav class="nav-bar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <img src="images/logos/wiy-logo.jpg" alt="WIY logo" class="nav-logo">
+        <div class="nav-brand-text-wrap">
+          <span class="nav-brand-name">Wrench It Yourself</span>
+          <span class="nav-brand-subtitle">Motorcycle DIY Division</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#bikes">Bikes</a></li>
+        <li><a href="#about">About</a></li>
       </ul>
-    </section>
+    </div>
+  </nav>
 
-    <section>
-      <h2>About</h2>
-      <p>WIY documents real motorcycle repair and maintenance work — one bike at a time. No gatekeeping, no fluff.</p>
-    </section>
-  </main>
+  <div class="container">
+    <header class="page-header">
+      <h1>Wrench It Yourself</h1>
+      <p class="tagline">Honest, step-by-step motorcycle repair and maintenance.</p>
+    </header>
+
+    <main>
+      <section id="bikes">
+        <h2>Bikes</h2>
+        <ul class="guide-list">
+          <li>
+            <a href="bikes/cfmoto-650-adventura.html">CFMoto 650 Adventura / MT</a>
+            <span class="desc">Maintenance logs, repair guides, and notes from a 2022 model.</span>
+          </li>
+        </ul>
+      </section>
+
+      <section id="about">
+        <h2>About</h2>
+        <p>WIY documents real motorcycle repair and maintenance work — one bike at a time. No gatekeeping, no fluff. Just the steps, the hardware sizes, and the gotchas I wish I'd had before I started.</p>
+      </section>
+    </main>
+  </div>
 
   <footer>
     <p>&copy; 2026 Wrench It Yourself (WIY)</p>
   </footer>
+
 </body>
 </html>
