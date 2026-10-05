@@ -5,25 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Philosophy &mdash; Wrench It Yourself</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap">
   <style>
-    /* Philosophy page-specific tweaks (safe to leave inline; they only affect this page) */
-    .page-intro { max-width: 760px; margin: 0 auto 2rem; }
-    .page-intro .subtitle {
-      color: #C5A067;
-      font-family: 'Oswald', sans-serif;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      font-size: 0.95rem;
-      margin-top: -0.5rem;
-    }
+    /* Philosophy page-specific tweaks. Safe to leave inline, only affect this page. */
     .rules-grid {
       display: grid;
       gap: 1.25rem;
-      max-width: 760px;
-      margin: 2rem auto;
+      margin: 1.5rem 0 2rem;
     }
     .rule-card {
       background: rgba(217, 109, 46, 0.08);
@@ -34,16 +21,13 @@
     .rule-card h3 {
       margin: 0 0 0.5rem;
       color: #D96D2E;
-      font-family: 'Oswald', sans-serif;
       letter-spacing: 0.04em;
       text-transform: uppercase;
       font-size: 1.1rem;
     }
     .rule-card p { margin: 0; }
-    .explanation-block { max-width: 760px; margin: 2rem auto; }
-    .explanation-block h3 {
+    #explanation h3 {
       color: #C5A067;
-      font-family: 'Oswald', sans-serif;
       letter-spacing: 0.04em;
       text-transform: uppercase;
       border-bottom: 1px solid rgba(197, 160, 103, 0.3);
@@ -72,100 +56,94 @@
 </head>
 <body>
 
-  <!-- =======================================================
-       HEADER / NAV
-       If this header looks different from your other pages,
-       open your index.html in a new tab, copy its <header>
-       block, and paste it over this one. Then make sure
-       the Philosophy link below is included in the nav.
-       ======================================================= -->
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="index.html" class="brand">
-        <img src="images/logos/wiy-logo.png" alt="Wrench It Yourself" class="brand-logo">
-        <span class="brand-subtitle">Motorcycle DIY Division</span>
+  <nav class="nav-bar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <img src="images/logos/wiy-logo.jpg" alt="WIY logo" class="nav-logo">
+        <div class="nav-brand-text-wrap">
+          <span class="nav-brand-name">Wrench It Yourself</span>
+          <span class="nav-brand-subtitle">Motorcycle DIY Division</span>
+        </div>
       </a>
-      <nav class="site-nav">
-        <a href="index.html">Home</a>
-        <a href="bikes/">Bikes</a>
-        <a href="philosophy.html" class="active" aria-current="page">Philosophy</a>
-      </nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#bikes">Bikes</a></li>
+        <li><a href="philosophy.html" class="active" aria-current="page">Philosophy</a></li>
+        <li><a href="index.html#about">About</a></li>
+      </ul>
     </div>
-  </header>
+  </nav>
 
-  <main class="content">
-
-    <div class="page-intro">
+  <div class="container">
+    <header class="page-header">
       <h1>Philosophy</h1>
-      <p class="subtitle">Why this site exists, and the rules I actually follow.</p>
-    </div>
+      <p class="tagline">Why this site exists, and the rules I actually follow.</p>
+    </header>
 
-    <section class="purpose">
-      <h2>Purpose</h2>
+    <main>
 
-      <p>The purpose of this site, and writing this stuff down, is to pass on information and let others know it's ok not knowing, and my father didn't really teach me shit either. I wanted to make my own community and place to share things I do, to help others figure their stuff out, that yes you can wrench it yourself.</p>
+      <section id="purpose">
+        <h2>Purpose</h2>
 
-      <p>A mechanic sometimes isn't even better. They might not care if it's a job to them, and no one cares about the project and your bike more than you.</p>
+        <p>The purpose of this site, and writing this stuff down, is to pass on information and let others know it's ok not knowing, and my father didn't really teach me shit either. I wanted to make my own community and place to share things I do, to help others figure their stuff out, that yes you can wrench it yourself.</p>
 
-      <p>A wise old person on the Honda forum told me about people asking why I was trying to fix what I was trying to do. He framed it thusly: "it's like trying to put lipstick on a pig, it's still a pig? Yeah well it's my pig." And I think that's maybe all the justification we need.</p>
+        <p>A mechanic sometimes isn't even better. They might not care if it's a job to them, and no one cares about the project and your bike more than you.</p>
 
-      <p>Sometimes it's good to know when to cut our losses and not take on a project, or when something is a money pit beyond our means. Facebook Marketplace, Craigslist, and classifieds are filled with emotional attachments to unfinished projects and people's unseen visions and unrealized dreams. It's ok to get help from a pro, but make sure you trust them, and they know what they're doing, or at least are honest about it.</p>
+        <p>A wise old person on the Honda forum told me about people asking why I was trying to fix what I was trying to do. He framed it thusly: "it's like trying to put lipstick on a pig, it's still a pig? Yeah well it's my pig." And I think that's maybe all the justification we need.</p>
 
-      <p>So like many people, I had to loathingly spend a lot of my youth handing wrenches and things to family members working on equipment. However, since they failed to actually teach me anything, the few things I did learn and still apply to this day are: Research, research, research. Know what you're doing before you do it, read the manual, talk to mechanics, call the dealership headquarters, watch YouTube. Most of the information is out there. Gather it, and gather the tools you'll need, and be prepared for the surprise "I need an extra tool" or "I need to take something else off", things can get much more committing real quick. Don't get mad or frustrated. If you do, take a break, go review your material, eat something, it's not worth it. Taking your time is fine. Don't force it. This is the hardest one, because sometimes things do take a hammer or leverage, and knowing when is the trick. And don't be afraid to call in a higher power, your local mechanic, or a not-so-local one.</p>
-    </section>
+        <p>Sometimes it's good to know when to cut our losses and not take on a project, or when something is a money pit beyond our means. Facebook Marketplace, Craigslist, and classifieds are filled with emotional attachments to unfinished projects and people's unseen visions and unrealized dreams. It's ok to get help from a pro, but make sure you trust them, and they know what they're doing, or at least are honest about it.</p>
 
-    <section class="rules">
-      <h2>My Rules of Motorcycle Mechanicing</h2>
+        <p>So like many people, I had to loathingly spend a lot of my youth handing wrenches and things to family members working on equipment. However, since they failed to actually teach me anything, the few things I did learn and still apply to this day are: Research, research, research. Know what you're doing before you do it, read the manual, talk to mechanics, call the dealership headquarters, watch YouTube. Most of the information is out there. Gather it, and gather the tools you'll need, and be prepared for the surprise "I need an extra tool" or "I need to take something else off", things can get much more committing real quick. Don't get mad or frustrated. If you do, take a break, go review your material, eat something, it's not worth it. Taking your time is fine. Don't force it. This is the hardest one, because sometimes things do take a hammer or leverage, and knowing when is the trick. And don't be afraid to call in a higher power, your local mechanic, or a not-so-local one.</p>
+      </section>
 
-      <div class="rules-grid">
-        <div class="rule-card">
-          <h3>Rule 1</h3>
-          <p>Research, research, research, and gather your materials. Know what you're going to do, more or less, and have a plan for it. Things go much more smoothly, with less frustration.</p>
+      <section id="rules">
+        <h2>My Rules of Motorcycle Mechanicing</h2>
+
+        <div class="rules-grid">
+          <div class="rule-card">
+            <h3>Rule 1</h3>
+            <p>Research, research, research, and gather your materials. Know what you're going to do, more or less, and have a plan for it. Things go much more smoothly, with less frustration.</p>
+          </div>
+
+          <div class="rule-card">
+            <h3>Rule 2</h3>
+            <p>Don't get mad or frustrated. Let it be zen. Take a break. Enjoy the experience of the journey, and not the fleeting moment of arriving at the destination.</p>
+          </div>
+
+          <div class="rule-card">
+            <h3>Rule 3</h3>
+            <p>Don't force it if it won't go, unless that's the absolute last thing to do, and even then, make sure you're making every attempt to not damage it or make things worse for yourself.</p>
+          </div>
         </div>
+      </section>
 
-        <div class="rule-card">
-          <h3>Rule 2</h3>
-          <p>Don't get mad or frustrated. Let it be zen. Take a break. Enjoy the experience of the journey, and not the fleeting moment of arriving at the destination.</p>
-        </div>
+      <section id="explanation">
+        <h2>Explanation</h2>
 
-        <div class="rule-card">
-          <h3>Rule 3</h3>
-          <p>Don't force it if it won't go, unless that's the absolute last thing to do, and even then, make sure you're making every attempt to not damage it or make things worse for yourself.</p>
-        </div>
-      </div>
-    </section>
+        <h3>Rule 1</h3>
+        <p>Read the manual, watch how-to videos, examine your bike, look at diagrams. There is a plethora of information out there. You'll be more successful the more you gather before you start, and make sure you have the right tools.</p>
+        <p>Make a plan, and plan to fail. Some things are more complicated than your current skill set, sometimes we find things are broken, or we break them, and that's okay. Seek an expert, or just realize this is a bigger problem and will take more time to solve.</p>
+        <p>Document, and keep parts and screws in order. Take pictures of where things go, because parts will fall off and you won't see it. I like to write on the table or on little pieces of paper to keep screws in, and put them with their parts.</p>
 
-    <section class="explanation-block">
-      <h2>Explanation</h2>
+        <h3>Rule 2</h3>
+        <p>This one can be particularly hard, but it comes with experience. I'll often make a mistake, or let external things build up and overflow into a current task. Taking a break from the problem, coming back and looking at it from a different angle, helps. Yes, we are trying to get stuff done, but let's be present in this moment, and not the future or the past. If this sounds familiar, it's also to do with meditation and Buddhism, and by no mistake do I use the wording "zen."</p>
 
-      <h3>Rule 1</h3>
-      <p>Read the manual, watch how-to videos, examine your bike, look at diagrams. There is a plethora of information out there. You'll be more successful the more you gather before you start, and make sure you have the right tools.</p>
-      <p>Make a plan, and plan to fail. Some things are more complicated than your current skill set, sometimes we find things are broken, or we break them, and that's okay. Seek an expert, or just realize this is a bigger problem and will take more time to solve.</p>
-      <p>Document, and keep parts and screws in order. Take pictures of where things go, because parts will fall off and you won't see it. I like to write on the table or on little pieces of paper to keep screws in, and put them with their parts.</p>
+        <blockquote class="miyagi">
+          <p>"Better learn balance. Balance is key. Balance good, karate good. Everything good. Balance bad, better pack up, go home. Understand? Lesson not just karate only. Lesson for whole life! Whole life have balance, everything be better."</p>
+          <cite>&mdash; Mr. Miyagi</cite>
+        </blockquote>
 
-      <h3>Rule 2</h3>
-      <p>This one can be particularly hard, but it comes with experience. I'll often make a mistake, or let external things build up and overflow into a current task. Taking a break from the problem, coming back and looking at it from a different angle, helps. Yes, we are trying to get stuff done, but let's be present in this moment, and not the future or the past. If this sounds familiar, it's also to do with meditation and Buddhism, and by no mistake do I use the wording "zen."</p>
+        <p>Rule 2 is where we build real skill, experience, and confidence.</p>
 
-      <blockquote class="miyagi">
-        <p>"Better learn balance. Balance is key. Balance good, karate good. Everything good. Balance bad, better pack up, go home. Understand? Lesson not just karate only. Lesson for whole life! Whole life have balance, everything be better."</p>
-        <cite>&mdash; Mr. Miyagi</cite>
-      </blockquote>
+        <h3>Rule 3</h3>
+        <p>This is a hard one. But if a bolt, screw, or anything is stuck, make sure you have the right tool, that you're not going to strip it, have your penetrating oil ready, try heat, try cold. Are you going the right direction? Is it reverse-threaded? Finally, maybe you need more leverage or torque to get it out. And last of last is easy-out, drill, or chisel, which will destroy things.</p>
+      </section>
 
-      <p>Rule 2 is where we build real skill, experience, and confidence.</p>
+    </main>
+  </div>
 
-      <h3>Rule 3</h3>
-      <p>This is a hard one. But if a bolt, screw, or anything is stuck, make sure you have the right tool, that you're not going to strip it, have your penetrating oil ready, try heat, try cold. Are you going the right direction? Is it reverse-threaded? Finally, maybe you need more leverage or torque to get it out. And last of last is easy-out, drill, or chisel, which will destroy things.</p>
-    </section>
-
-  </main>
-
-  <!-- =======================================================
-       FOOTER
-       If this doesn't match your other pages, copy your
-       index.html footer and paste it over this block.
-       ======================================================= -->
-  <footer class="site-footer">
-    <p>&copy; 2026 Wrench It Yourself</p>
+  <footer>
+    <p>&copy; 2026 Wrench It Yourself (WIY)</p>
   </footer>
 
 </body>
