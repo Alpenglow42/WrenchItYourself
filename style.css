@@ -31,7 +31,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;
-  height: 76px;
+  height: 92px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -47,8 +47,8 @@ body {
 }
 
 .nav-logo {
-  width: 48px;
-  height: 48px;
+  width: 72px;
+  height: 72px;
   object-fit: contain;
   flex-shrink: 0;
 }
