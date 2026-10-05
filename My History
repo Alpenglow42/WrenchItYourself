@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My History &mdash; Wrench It Yourself</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav-bar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <img src="images/logos/wiy-logo.jpg" alt="WIY logo" class="nav-logo">
+        <div class="nav-brand-text-wrap">
+          <span class="nav-brand-name">Wrench It Yourself</span>
+          <span class="nav-brand-subtitle">Motorcycle DIY Division</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#bikes">Bikes</a></li>
+        <li><a href="philosophy.html">Philosophy</a></li>
+        <li><a href="my-history.html" class="active" aria-current="page">My History</a></li>
+        <li><a href="index.html#about">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <header class="page-header">
+      <h1>My History</h1>
+      <p class="tagline">The bikes that got me here.</p>
+    </header>
+
+    <main>
+
+      <section id="nighthawk">
+        <h2>Honda CB450SC Nighthawk</h2>
+
+        <p>I was never into working on things, mostly because I just got yelled at by my father because I inherently didn't know the next size of wrench or how an engine worked. At no time did he teach me. This led to me really hating working on things until I got an '82 CB450SC, the Honda Nighthawk. It was my first real street bike. I had an old Honda 125 3-wheeler I had Frankensteined together in high school, and ridden a few farm bikes and things, but in 2012 I bought it on a whim in San Jose for 900 bucks.</p>
+
+        <p>It was a neglected piece of crap I fell in love with, and decided to fix the cam chain tensioner, which later ended up a full top-end teardown, among other things. Chiseling off seized rusted bolts and taking the bike apart replacing all the screws, for it to have problem after problem. The Honda Wings or something forum really helped, as well as locating the manual. I gained a lot of know-how and confidence.</p>
+
+        <p>I'd also thank Richard at Rabers in San Jose for all his advice, and Dave my local mechanic who I annoyed gleaning advice. Working out of my landlord's back yard in Japantown, San Jose, in a $150 steel-framed tarp tent, everything was on blocks as it flooded when it rained. I got it back together and running. It was a huge boost of confidence and made me feel like I could do just about anything.</p>
+      </section>
+
+      <section id="er6n">
+        <h2>Kawasaki ER-6N</h2>
+
+        <p>Since then I decided, unless it was my full-time job, I'd rather ride than wrench. But sometimes things are unavoidable. My next bike was a 2009 ER-6N Kawasaki 650, the naked Ninja. Funny enough the same engine is in my CFMoto today. It was a great bike, and the next step for me. Sadly about 6 months after buying it, I lost my job, had to sell it with everything else, and started on my journey of learning how to code. This was about 2014.</p>
+      </section>
+
+      <section id="ktm">
+        <h2>KTM Duke 200</h2>
+
+        <p>The next time I got a bike I could call my own was in 2022. I had been living in Thailand since 2019 and had enough to buy a motorcycle. My longtime girlfriend (now my wife) and I had been doing some local tours in Chiang Mai on her 110cc Honda Wave. Although a great bike, it was too small. So looking at the market, I eventually came across a 2015 KTM Duke 200. I got it for about 800 bucks with a very favorable exchange rate, $894.74. It had been sitting for awhile, didn't have many miles on it or kms. Over there it was cheaper to hire a mechanic to do the work, and they didn't mind if you watched them do it as well, or help out. It was a great bike for us, and we loaded it up with backpacks and did more than a few trips on mountain backroads. I really loved that bike the most.</p>
+
+        <p>In 2023 I accepted a job back in the states, and my now wife took over possession, and rode it around for the next year. It didn't survive a flood, but she got a local mechanic to fix it for 80 bucks or so and made it look new again. I got to ride it when I picked her up the next year. We later sold it and donated money to a relative.</p>
+      </section>
+
+      <section id="cfmoto">
+        <h2>CFMoto 650 ADVentura</h2>
+
+        <p>In 2026 I was about to graduate grad school, and looking at a bike being stuck in the Southern heartland there's not a lot to do as far as entertainment. My wife caught me, and to my surprise she said, "up to you. I think maybe a good idea." That's all I needed and started looking around.</p>
+
+        <p>Eventually I saw the CFMoto 650 ADVentura from 2022 and 2023. It was cheap, had side panniers, and looked like a good bike. I did my research, I couldn't find anything inherently bad, and best part, because this was the first bike that they brought to the US. Most people kinda ignored it, or because of price point a lot of beginners or long-time wanna-be bikers bought them, and never rode them. All with less than 1000 miles, they were going for 3k or less. I found mine at a dealer for $3,500 with cases and everything, for 300 miles.</p>
+
+        <p>It's by far the most modern bike I've ridden, and has the nicest suspension and electronics. Besides quirks of occasional engine heat, I'd say the headlight really sucks, and the seat also sucks after two hours. If I had more money I probably would've bought a different bike. But that's never been my problem to have.</p>
+      </section>
+
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Wrench It Yourself (WIY)</p>
+  </footer>
+
+</body>
+</html>
