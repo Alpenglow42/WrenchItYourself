@@ -47,8 +47,8 @@ body {
 }
 
 .nav-logo {
-  width: 72px;
-  height: 72px;
+  width: 150px;
+  height: 150px;
   object-fit: contain;
   flex-shrink: 0;
 }
@@ -97,7 +97,7 @@ body {
 
 /* ===== Content Container ===== */
 .container {
-  max-width: 900px;
+  max-width: 1800px;
   margin: 0 auto;
   padding: 2.5rem 1.5rem;
 }
