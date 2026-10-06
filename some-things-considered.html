@@ -8,7 +8,9 @@
   <title>Some Things Considered &mdash; Wrench It Yourself</title>
   <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
   <style>
-    /* Page-specific: style for AI-attributed explainer boxes. */
+    /* Page-specific styles. Only affect this page. */
+    html { scroll-behavior: smooth; }
+
     .ai-explainer {
       background: rgba(197, 160, 103, 0.07);
       border-left: 4px solid #C5A067;
@@ -26,6 +28,24 @@
     .ai-explainer ul { margin: 0.75rem 0 0; }
     .ai-explainer li { margin-bottom: 0.75rem; }
     .ai-explainer li:last-child { margin-bottom: 0; }
+
+    .back-to-top {
+      margin-top: 2.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(197, 160, 103, 0.2);
+      text-align: right;
+    }
+    .back-to-top a {
+      color: #C5A067;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .back-to-top a:hover { text-decoration: underline; }
+
+    article {
+      margin-top: 3rem;
+      padding-top: 1rem;
+    }
   </style>
 </head>
 <body>
@@ -39,6 +59,16 @@
     </header>
 
     <main>
+
+      <section id="articles-list">
+        <h2>Things Considered So Far</h2>
+        <ul class="guide-list">
+          <li>
+            <a href="#superglue-tricks">Superglue Tricks</a>
+            <span class="desc">Baking soda matrix, the instant water-cure, and freezer storage.</span>
+          </li>
+        </ul>
+      </section>
 
       <article id="superglue-tricks">
         <h2>Superglue Tricks</h2>
@@ -73,6 +103,8 @@
         <h3>Freezer Storage</h3>
 
         <p>Storing superglue is difficult because it'll harden. However, did you know that putting a used superglue sachet into a ziploc and storing it in the freezer will cause it not to harden? I found this out because I use superglue to hold together cuts I might need stitches for, or as butterflies, and I rarely use it all.</p>
+
+        <p class="back-to-top"><a href="#articles-list">&uarr; Back to top</a></p>
       </article>
 
     </main>
