@@ -47,6 +47,85 @@
     .ai-explainer li { margin-bottom: 0.75rem; }
     .ai-explainer li:last-child { margin-bottom: 0; }
 
+    .formula-box {
+      background: rgba(197, 160, 103, 0.08);
+      border-left: 4px solid #C5A067;
+      padding: 1rem 1.5rem;
+      margin: 1rem 0 1.25rem;
+      border-radius: 3px;
+      overflow-x: auto;
+    }
+    .formula-box code {
+      background: none;
+      font-family: 'Lora', Georgia, serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: #C5A067;
+      white-space: nowrap;
+    }
+
+    .wct-grid {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      margin: 1rem 0 1.5rem;
+      overflow-x: auto;
+      display: block;
+    }
+    .wct-grid thead { display: table-header-group; }
+    .wct-grid tbody { display: table-row-group; }
+    .wct-grid tr { display: table-row; }
+    .wct-grid th, .wct-grid td { display: table-cell; }
+    .wct-grid th, .wct-grid td {
+      padding: 0.5rem 0.3rem;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .wct-grid th {
+      background: rgba(217, 109, 46, 0.15);
+      color: #D96D2E;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-size: 0.75rem;
+      white-space: nowrap;
+    }
+    .wct-grid td.row-head {
+      background: rgba(197, 160, 103, 0.1);
+      font-weight: 700;
+      white-space: nowrap;
+      min-width: 55px;
+    }
+    .wct-grid .celsius {
+      display: block;
+      font-size: 0.7rem;
+      color: #C5A067;
+      font-weight: 500;
+    }
+    .wct-grid td.wct-cell {
+      color: white;
+      font-weight: 700;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+      min-width: 60px;
+    }
+    .wct-grid .delta {
+      display: block;
+      font-size: 0.65rem;
+      font-weight: 500;
+      opacity: 0.9;
+      margin-top: 2px;
+    }
+    .wct-section-head {
+      background: linear-gradient(90deg, rgba(217, 109, 46, 0.25), rgba(197, 160, 103, 0.1));
+      color: #D96D2E;
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.5rem 0.75rem !important;
+      text-align: left !important;
+    }
+
     .back-to-top {
       margin-top: 2.5rem;
       padding-top: 1rem;
@@ -95,6 +174,10 @@
             <a href="#superglue-tricks">Superglue Tricks</a>
             <span class="desc">Baking soda matrix, the instant water-cure, and freezer storage.</span>
           </li>
+          <li>
+            <a href="#motorcycle-wind-chill">Motorcycle Wind Chill</a>
+            <span class="desc">What really drops the "feels like" temperature at speed, with charts for shielded vs unshielded.</span>
+          </li>
         </ul>
       </section>
 
@@ -135,12 +218,212 @@
         <p class="back-to-top"><a href="#articles-list">&uarr; Back to top</a></p>
       </article>
 
+      <article id="motorcycle-wind-chill">
+        <h2>Motorcycle Wind Chill</h2>
+
+        <p>So with the temperature rapidly changing and light fading I started to think about: is there a better way to know how to layer in my gear. First caveat is that I have all mesh summer gear, because it's hot where I'm at. I may get some not-so-mesh gear, but as I said before, having money has never been my problem, and I have great layers.</p>
+
+        <p>So what factors make it colder on a bike? Let's start with a 90 degree F day. Now if I'm doing 5-10mph in town I'm going to be hot, but 40mph and above quite comfortable. Does the temperature change? No it does not.</p>
+
+        <p>So what's happening is the same thing as on a windy day where I got hypothermic and hallucinated while trying to ascend a 14er in the White Mountains in Eastern California. The wind robs your body of the heat molecules around it, causing your body to try to work harder to heat the air, obviously it can't do this, and we get cold. This event is well known as the wind chill factor. Below I have used some dubious math and charts to consider speed vs temperature vs windshield vs not.</p>
+
+        <p>Now of course the size of the windshield will matter, as well as full fairings. Basically the more airflow around you, the more the perceived temperature change is going to happen at speed, not counting actual wind produced by the weather and not your throttle hand.</p>
+
+        <h3>The Formula</h3>
+        <p>The U.S. National Weather Service / Environment Canada wind chill equation, revised in 2001, gives the perceived temperature on bare skin:</p>
+
+        <div class="formula-box">
+          <code>WCT = 35.74 + 0.6215·T − 35.75·V<sup>0.16</sup> + 0.4275·T·V<sup>0.16</sup></code>
+        </div>
+
+        <p>Where <em>T</em> is ambient temperature (°F) and <em>V</em> is wind speed relative to your body (mph). On an open bike, that's your road speed.</p>
+
+        <div class="ai-explainer">
+          <p>Validity window: the formula is only defined for T ≤ 50°F and V ≥ 3 mph. Above 50°F there's still convective cooling at speed (which actually feels nice when it's hot), but the formula over-cools if you try to use it there, so summer rows just show ambient.</p>
+        </div>
+
+        <h3>Chart 1: Unshielded (full blast)</h3>
+        <p>No fairing. Your chest sees the full road-speed airflow.</p>
+
+        <table class="wct-grid">
+          <thead>
+            <tr>
+              <th>Air T</th>
+              <th>0 mph</th>
+              <th>25 mph</th>
+              <th>50 mph</th>
+              <th>75 mph</th>
+            </tr>
+          </thead>
+          <tbody id="wct-unshielded"></tbody>
+        </table>
+
+        <h3>Shielded Variant (windshield / fairing)</h3>
+        <p>A full windshield or fairing creates a low-velocity recirculation pocket in front of your torso. The air hitting your chest moves much slower than the bike moves through the air. Modeled as a simple velocity scaling:</p>
+
+        <div class="formula-box">
+          <code>V<sub>effective</sub> = k · V<sub>road</sub></code>
+        </div>
+
+        <p>Where <em>k</em> is the shield mitigation factor (dimensionless, 0 to 1):</p>
+        <ul>
+          <li><strong>0.05 – 0.10</strong> — tall touring windshield or full fairing (BMW RT, Gold Wing)</li>
+          <li><strong>0.10 – 0.20</strong> — mid-size shield that reaches between chest and chin</li>
+          <li><strong>0.30 – 0.50</strong> — small sport bubble, flyscreen</li>
+          <li><strong>1.00</strong> — no shield (reduces to the base formula)</li>
+        </ul>
+
+        <p>The chart below uses <em>k</em> = 0.10 (full touring fairing).</p>
+
+        <div class="ai-explainer">
+          <p>Covers torso only. Hands, head, and feet still see the full unshielded number. Grip warmers, a good helmet, and insulated boots matter more than the fairing for those zones.</p>
+        </div>
+
+        <h3>Chart 2: Shielded (mitigated)</h3>
+        <p>Full fairing creating a stable low-velocity pocket at the torso. Effective airflow ≈ 10% of road speed.</p>
+
+        <table class="wct-grid">
+          <thead>
+            <tr>
+              <th>Air T</th>
+              <th>0 mph</th>
+              <th>25 mph</th>
+              <th>50 mph</th>
+              <th>75 mph</th>
+            </tr>
+          </thead>
+          <tbody id="wct-shielded"></tbody>
+        </table>
+
+        <h3>Reading Notes</h3>
+        <ul>
+          <li>Numbers are "feels like" temperature on exposed skin, rounded to the nearest 1°F.</li>
+          <li>Summer rows (above 50°F) show ambient only — the NWS formula isn't valid there.</li>
+          <li>0 mph columns are stationary rider in still air. A 20 mph gust while waiting at a light would still produce real wind chill, but that's not modeled here.</li>
+          <li>Delta underneath each cell shows how far below ambient the perceived temperature has dropped.</li>
+          <li>Formula source: NWS / Environment Canada joint revision, 2001. The shielded extension is an engineering simplification, not an official standard. A real fairing produces turbulent, non-uniform flow that this scalar model only approximates.</li>
+        </ul>
+
+        <p class="back-to-top"><a href="#articles-list">&uarr; Back to top</a></p>
+      </article>
+
     </main>
   </div>
 
   <footer>
     <p>&copy; 2026 Wrench It Yourself (WIY)</p>
   </footer>
+
+  <script>
+  (function() {
+    const data = {
+      unshielded: {
+        95:  {0:95, 25:95,  50:95,  75:95},
+        85:  {0:85, 25:85,  50:85,  75:85},
+        75:  {0:75, 25:75,  50:75,  75:75},
+        70:  {0:70, 25:70,  50:70,  75:70},
+        65:  {0:65, 25:65,  50:65,  75:65},
+        55:  {0:55, 25:55,  50:55,  75:55},
+        50:  {0:50, 25:43,  50:40,  75:38},
+        45:  {0:45, 25:36,  50:33,  75:31},
+        40:  {0:40, 25:29,  50:26,  75:23},
+        35:  {0:35, 25:23,  50:19,  75:16},
+        25:  {0:25, 25:9,   50:4,   75:1},
+        15:  {0:15, 25:-4,  50:-10, 75:-13},
+        5:   {0:5,  25:-17, 50:-24, 75:-28},
+        '-5':{0:-5, 25:-31, 50:-38, 75:-43},
+        '-15':{0:-15,25:-44,50:-52, 75:-58}
+      },
+      shielded: {
+        95:  {0:95, 25:95,  50:95,  75:95},
+        85:  {0:85, 25:85,  50:85,  75:85},
+        75:  {0:75, 25:75,  50:75,  75:75},
+        70:  {0:70, 25:70,  50:70,  75:70},
+        65:  {0:65, 25:65,  50:65,  75:65},
+        55:  {0:55, 25:55,  50:55,  75:55},
+        50:  {0:50, 25:50,  50:48,  75:47},
+        45:  {0:45, 25:44,  50:42,  75:41},
+        40:  {0:40, 25:39,  50:36,  75:35},
+        35:  {0:35, 25:33,  50:31,  75:29},
+        25:  {0:25, 25:22,  50:19,  75:17},
+        15:  {0:15, 25:11,  50:7,   75:5},
+        5:   {0:5,  25:0,   50:-5,  75:-8},
+        '-5':{0:-5, 25:-11, 50:-16, 75:-20},
+        '-15':{0:-15,25:-22,50:-28, 75:-32}
+      }
+    };
+
+    // Group temperatures into seasonal bands for visual separation
+    const seasonBands = [
+      { label: 'Summer (warm & mild)', temps: [95, 85, 75, 70] },
+      { label: 'Spring & Fall (cool to cold)', temps: [65, 55, 50, 45, 40] },
+      { label: 'Winter (cold to freezing)', temps: [35, 25, 15, 5, '-5', '-15'] }
+    ];
+
+    function tierColor(feels, airT) {
+      if (airT > 50) {
+        if (airT >= 95) return '#b91c1c';
+        if (airT >= 85) return '#ea580c';
+        if (airT >= 75) return '#f59e0b';
+        return '#65a30d';
+      }
+      if (feels >= 60)  return '#65a30d';
+      if (feels >= 45)  return '#16a34a';
+      if (feels >= 30)  return '#ca8a04';
+      if (feels >= 15)  return '#d97706';
+      if (feels >= -10) return '#dc2626';
+      if (feels >= -30) return '#7f1d1d';
+      return '#450a0a';
+    }
+
+    function renderChart(tbodyId, chartType) {
+      const tbody = document.getElementById(tbodyId);
+      if (!tbody) return;
+      const speeds = [0, 25, 50, 75];
+
+      for (const band of seasonBands) {
+        // Section header row
+        const headTr = document.createElement('tr');
+        const headTd = document.createElement('td');
+        headTd.colSpan = 5;
+        headTd.className = 'wct-section-head';
+        headTd.textContent = band.label;
+        headTr.appendChild(headTd);
+        tbody.appendChild(headTr);
+
+        for (const t of band.temps) {
+          const tr = document.createElement('tr');
+          const th = document.createElement('td');
+          th.className = 'row-head';
+          const tNum = parseInt(t, 10);
+          const celsius = Math.round((tNum - 32) * 5 / 9);
+          th.innerHTML = tNum + '°F<span class="celsius">' + celsius + '°C</span>';
+          tr.appendChild(th);
+
+          for (const v of speeds) {
+            const td = document.createElement('td');
+            const feels = data[chartType][t][v];
+            td.style.background = tierColor(feels, tNum);
+            td.className = 'wct-cell';
+            if (tNum > 50 && v !== 0) {
+              td.innerHTML = feels + '°F<span class="delta">ambient</span>';
+            } else if (v === 0) {
+              td.innerHTML = feels + '°F<span class="delta">stationary</span>';
+            } else {
+              const drop = tNum - feels;
+              td.innerHTML = feels + '°F<span class="delta">−' + drop + '°F drop</span>';
+            }
+            tr.appendChild(td);
+          }
+          tbody.appendChild(tr);
+        }
+      }
+    }
+
+    renderChart('wct-unshielded', 'unshielded');
+    renderChart('wct-shielded', 'shielded');
+  })();
+  </script>
 
 </body>
 </html>
