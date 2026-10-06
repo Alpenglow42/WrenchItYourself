@@ -1,31 +1,16 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>3,000-Mile Top-End Service — CFMoto 650 Adventura — Wrench It Yourself</title>
-  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
 </head>
 <body>
 
-  <nav class="nav-bar">
-    <div class="nav-container">
-      <a href="../../index.html" class="nav-brand">
-        <img src="../../images/logos/wiy-logo.jpg" alt="WIY logo" class="nav-logo">
-        <div class="nav-brand-text-wrap">
-          <span class="nav-brand-name">Wrench It Yourself</span>
-          <span class="nav-brand-subtitle">Motorcycle DIY Division</span>
-        </div>
-      </a>
-      <ul class="nav-links">
-        <li><a href="../../index.html">Home</a></li>
-        <li><a href="../../index.html#bikes">Bikes</a></li>
-        <li><a href="../../philosophy.html">Philosophy</a></li>
-        <li><a href="../../my-history.html">My History</a></li>
-        <li><a href="../../index.html#about">About</a></li>
-      </ul>
-    </div>
-  </nav>
+  {% include nav.html %}
 
   <div class="container">
     <a href="../../bikes/cfmoto-650-adventura.html" class="back-link">← Back to CFMoto 650 Adventura</a>
