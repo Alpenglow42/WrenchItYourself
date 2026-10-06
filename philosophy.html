@@ -1,10 +1,12 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Philosophy &mdash; Wrench It Yourself</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
   <style>
     /* Philosophy page-specific tweaks. Safe to leave inline, only affect this page. */
     .rules-grid {
@@ -56,24 +58,7 @@
 </head>
 <body>
 
-  <nav class="nav-bar">
-    <div class="nav-container">
-      <a href="index.html" class="nav-brand">
-        <img src="images/logos/wiy-logo.jpg" alt="WIY logo" class="nav-logo">
-        <div class="nav-brand-text-wrap">
-          <span class="nav-brand-name">Wrench It Yourself</span>
-          <span class="nav-brand-subtitle">Motorcycle DIY Division</span>
-        </div>
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#bikes">Bikes</a></li>
-        <li><a href="philosophy.html" class="active" aria-current="page">Philosophy</a></li>
-        <li><a href="my-history.html">My History</a></li>
-        <li><a href="index.html#about">About</a></li>
-      </ul>
-    </div>
-  </nav>
+  {% include nav.html %}
 
   <div class="container">
     <header class="page-header">
