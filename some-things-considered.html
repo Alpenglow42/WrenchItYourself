@@ -1,0 +1,86 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Some Things Considered &mdash; Wrench It Yourself</title>
+  <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+  <style>
+    /* Page-specific: style for AI-attributed explainer boxes. */
+    .ai-explainer {
+      background: rgba(197, 160, 103, 0.07);
+      border-left: 4px solid #C5A067;
+      padding: 1rem 1.5rem;
+      margin: 1.25rem 0;
+      border-radius: 2px;
+    }
+    .ai-explainer p:first-child {
+      font-style: italic;
+      color: #C5A067;
+      margin-top: 0;
+      font-size: 0.9rem;
+      letter-spacing: 0.03em;
+    }
+    .ai-explainer ul { margin: 0.75rem 0 0; }
+    .ai-explainer li { margin-bottom: 0.75rem; }
+    .ai-explainer li:last-child { margin-bottom: 0; }
+  </style>
+</head>
+<body>
+
+  {% include nav.html %}
+
+  <div class="container">
+    <header class="page-header">
+      <h1>Some Things Considered</h1>
+      <p class="tagline">Science and opinion. Not all things, just some.</p>
+    </header>
+
+    <main>
+
+      <article id="superglue-tricks">
+        <h2>Superglue Tricks</h2>
+
+        <h3>Superglue + Baking Soda</h3>
+
+        <p>The last thing I did, which was from a break I did, was that the side windshields have a long plexiglass hole where an Allen screw attaches it, and I was trying to see if I could mount my phone or other things there out of the way. The answer is yes, and no, because it doesn't work, and if I get adjustability then I hit the handlebars' turning radius. So I broke the second attachment point and plastic tab.</p>
+
+        <p>Having become somewhat of a wizard with superglue, I used that and baking soda. That makes a harder, more resilient plastic. I used this as a temporary fix while I ordered the stock replacement from AliExpress. However it worked so good I haven't replaced it.</p>
+
+        <div class="ai-explainer">
+          <p>I asked AI to explain the chemistry. Here's what's happening:</p>
+          <ul>
+            <li><strong>Catalyzed polymerization:</strong> Superglue cures when exposed to base molecules or moisture (hydroxyl ions). Baking soda acts as an aggressive alkaline catalyst. On contact, it forces the liquid cyanoacrylate to polymerize (link into long chemical chains) almost instantly instead of taking 30–60 seconds.</li>
+            <li><strong>Composite structural matrix:</strong> The solid baking soda particles get encased directly within the fast-curing polymer matrix. This transforms the superglue from a thin layer between surfaces into a thick, rock-hard 3D composite material similar to acrylic plastic.</li>
+          </ul>
+        </div>
+
+        <h3>Superglue + Water</h3>
+
+        <p>Another trick is a few drops of water will make superglue cure almost instantly. However this reaction is exothermic and will heat up a bit.</p>
+
+        <div class="ai-explainer">
+          <p>Again, AI on the chemistry:</p>
+          <ul>
+            <li><strong>Hydroxyl ion catalyst:</strong> Superglue requires a base (specifically hydroxyl ions, OH−) to kick off its curing process. While superglue normally relies on trace humidity in the air or moisture on surface boundaries to cure over tens of seconds, adding direct water introduces an abundance of moisture at once.</li>
+            <li><strong>Instant polymerization:</strong> The liquid cyanoacrylate monomers rapidly chain together in a runaway reaction, solidifying the glue in under two seconds.</li>
+            <li><strong>Exothermic heat release:</strong> Chemical bond formation releases energy. Because a reaction that usually takes 30 to 60 seconds happens in a fraction of a second, all that thermal energy is released at once. A single drop can get surprisingly hot to the touch, and larger pools can bubble, steam, or scorch sensitive surfaces.</li>
+          </ul>
+        </div>
+
+        <h3>Freezer Storage</h3>
+
+        <p>Storing superglue is difficult because it'll harden. However, did you know that putting a used superglue sachet into a ziploc and storing it in the freezer will cause it not to harden? I found this out because I use superglue to hold together cuts I might need stitches for, or as butterflies, and I rarely use it all.</p>
+      </article>
+
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Wrench It Yourself (WIY)</p>
+  </footer>
+
+</body>
+</html>
