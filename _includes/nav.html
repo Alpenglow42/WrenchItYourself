@@ -1,0 +1,18 @@
+<nav class="nav-bar">
+  <div class="nav-container">
+    <a href="{{ '/index.html' | relative_url }}" class="nav-brand">
+      <img src="{{ '/images/logos/wiy-logo.jpg' | relative_url }}" alt="WIY logo" class="nav-logo">
+      <div class="nav-brand-text-wrap">
+        <span class="nav-brand-name">Wrench It Yourself</span>
+        <span class="nav-brand-subtitle">Motorcycle DIY Division</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="{{ '/index.html' | relative_url }}"{% if page.url == '/index.html' or page.url == '/' %} class="active" aria-current="page"{% endif %}>Home</a></li>
+      <li><a href="{{ '/index.html#bikes' | relative_url }}">Bikes</a></li>
+      <li><a href="{{ '/philosophy.html' | relative_url }}"{% if page.url == '/philosophy.html' %} class="active" aria-current="page"{% endif %}>Philosophy</a></li>
+      <li><a href="{{ '/my-history.html' | relative_url }}"{% if page.url == '/my-history.html' %} class="active" aria-current="page"{% endif %}>My History</a></li>
+      <li><a href="{{ '/index.html#about' | relative_url }}">About</a></li>
+    </ul>
+  </div>
+</nav>
