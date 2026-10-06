@@ -1,0 +1,8 @@
+# Jekyll config for Wrench It Yourself
+# baseurl is the subpath after the domain where the site lives.
+# For alpenglow42.github.io/WrenchItYourself/, that's "/WrenchItYourself".
+baseurl: "/WrenchItYourself"
+
+# Exclude the README from being treated as a page.
+exclude:
+  - README.md
