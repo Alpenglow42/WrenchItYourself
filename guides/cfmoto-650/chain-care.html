@@ -1,1 +1,297 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cleaning and Lubing the Chain &mdash; Wrench It Yourself</title>
+  <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+  {% include analytics.html %}
+  <style>
+    /* Page-specific styles. Only affect this page. */
+    html { scroll-behavior: smooth; }
 
+    .breadcrumb {
+      font-size: 0.9rem;
+      color: #C5A067;
+      margin-bottom: 1rem;
+    }
+    .breadcrumb a {
+      color: #C5A067;
+      text-decoration: none;
+    }
+    .breadcrumb a:hover { text-decoration: underline; }
+
+    .intro-box {
+      background: rgba(217, 109, 46, 0.06);
+      border-left: 4px solid #D96D2E;
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0 2rem;
+      border-radius: 3px;
+    }
+    .intro-box p:last-child { margin-bottom: 0; }
+
+    .callout {
+      background: rgba(197, 160, 103, 0.07);
+      border-left: 4px solid #C5A067;
+      padding: 1rem 1.5rem;
+      margin: 1.25rem 0;
+      border-radius: 2px;
+    }
+    .callout p:first-child {
+      font-style: italic;
+      color: #C5A067;
+      margin-top: 0;
+      font-size: 0.9rem;
+      letter-spacing: 0.03em;
+    }
+    .callout p:last-child { margin-bottom: 0; }
+
+    .warn {
+      background: rgba(185, 28, 28, 0.08);
+      border-left: 4px solid #b91c1c;
+      padding: 1rem 1.5rem;
+      margin: 1.25rem 0;
+      border-radius: 2px;
+    }
+    .warn p:first-child {
+      font-style: italic;
+      color: #ef4444;
+      margin-top: 0;
+      font-size: 0.9rem;
+      letter-spacing: 0.03em;
+    }
+    .warn p:last-child { margin-bottom: 0; }
+
+    /* Figures */
+    .article-figure {
+      margin: 1.5rem auto;
+      text-align: center;
+      max-width: 600px;
+    }
+    .article-figure img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      background: #f5f0e8;
+      padding: 0.4rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .article-figure.narrow { max-width: 420px; }
+    .article-figure.wide   { max-width: 760px; }
+    .article-figure figcaption {
+      margin-top: 0.75rem;
+      font-size: 0.85rem;
+      color: #C5A067;
+      font-style: italic;
+      line-height: 1.5;
+      padding: 0 0.5rem;
+    }
+
+    /* Side-by-side pair of figures */
+    .figure-pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .figure-pair .article-figure {
+      margin: 0;
+      max-width: 100%;
+    }
+    @media (max-width: 640px) {
+      .figure-pair { grid-template-columns: 1fr; }
+    }
+
+    .supply-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0 2rem;
+    }
+    .supply-grid .article-figure {
+      margin: 0;
+      max-width: 100%;
+    }
+    .supply-grid .article-figure img {
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+
+    h2 {
+      color: #D96D2E;
+      margin-top: 2.5rem;
+      padding-top: 0.5rem;
+      border-top: 1px solid rgba(197, 160, 103, 0.15);
+    }
+    h2:first-of-type { border-top: none; padding-top: 0; margin-top: 2rem; }
+
+    h3 {
+      color: #C5A067;
+      margin-top: 1.75rem;
+    }
+  </style>
+</head>
+<body>
+
+  {% include nav.html %}
+
+  <div class="container">
+    <header class="page-header">
+      <p class="breadcrumb"><a href="{{ '/bikes/cfmoto-650-adventura.html' | relative_url }}">&larr; CFMoto 650 Adventura</a></p>
+      <h1>Cleaning and Lubing the Chain</h1>
+      <p class="tagline">Kerosene, a grunge brush, and 20 minutes of your life every 500 miles.</p>
+    </header>
+
+    <main>
+
+      <section class="intro-box">
+        <p>Chain maintenance is universal — this applies to any chain-drive bike, not just the CFMoto. Skip it and you'll be replacing a chain and sprockets at 15,000 miles instead of 30,000.</p>
+      </section>
+
+      <h2>Know Your Chain</h2>
+
+      <p>Two types of chains exist here: <strong>sealed</strong> and <strong>non-sealed</strong>. Sealed chains come in two flavors &mdash; <strong>O-ring</strong> and <strong>X-ring</strong> &mdash; named after the cross-section of the rubber ring sandwiched between the inner and outer side plates. Both do the same job: trap factory grease on the pin and bushing forever. X-ring is just an evolution of the O-ring with less friction (two smaller sealing contact points instead of one squished one). <strong>Non-sealed (standard)</strong> chains have no rubber rings &mdash; the internal bearing is open to the world.</p>
+
+      <div class="figure-pair">
+        <figure class="article-figure">
+          <img src="{{ '/images/clean_lube/oring_chain_DIA.jpg' | relative_url }}" alt="Diagram of an O-ring sealed chain showing the pin, bushing, roller, O-ring, and outer plate.">
+          <figcaption>O-ring sealed chain. Rubber O-ring sits between the plates, trapping grease on the pin and bushing.</figcaption>
+        </figure>
+        <figure class="article-figure">
+          <img src="{{ '/images/clean_lube/xring_seal_dia.png' | relative_url }}" alt="Diagram of an X-ring sealed chain showing the X-shaped cross-section of the seal.">
+          <figcaption>X-ring. Same job as the O-ring, but the X-shaped cross-section gives two small sealing contacts instead of one, reducing friction.</figcaption>
+        </figure>
+      </div>
+
+      <p>Basically, if you see any rubber ring between the side plates, you have a sealed chain. All chains need cleaning. Sealed chains don't need lube reaching the internal bearings &mdash; those are sealed and greased for life at the factory &mdash; but they absolutely do need lube on the rollers (which spin against the sprocket teeth) and to keep the rubber rings supple so they don't dry out and crack.</p>
+
+      <p>Keep in mind: what matters most is the rollers. The outer side links aren't doing any sliding work, but the rollers are what engage the sprockets, every rotation.</p>
+
+      <figure class="article-figure">
+        <img src="{{ '/images/clean_lube/Grime_inbet_links.jpg' | relative_url }}" alt="Close-up of a dirty motorcycle chain with black grime packed between the links.">
+        <figcaption>This is what you're trying to get out. Black grime between the links means grit packed around the rollers, grinding away at your sprockets.</figcaption>
+      </figure>
+
+      <h2>What to Clean With</h2>
+
+      <p>You can use many things, but what you <em>should</em> use is <strong>kerosene</strong>. It dissolves road oil, old lube, and dirt like nothing else, it's dirt cheap, and it's what the major chain manufacturers (DID in particular) specifically recommend.</p>
+
+      <div class="warn">
+        <p>Do NOT use these on a sealed chain:</p>
+        <p>Gasoline, carb cleaner, brake cleaner, strong degreasers, or wire brushes. All of them can swell or tear the O/X-rings. Once the rings fail, the internal grease escapes and the chain is cooked.</p>
+      </div>
+
+      <figure class="article-figure narrow">
+        <img src="{{ '/images/clean_lube/Kerosine_stockbtl.jpg' | relative_url }}" alt="A gallon jug of Sunnyside brand kerosene.">
+        <figcaption>Kerosene from the hardware store. One gallon lasts a long time.</figcaption>
+      </figure>
+
+      <p>Get a spray bottle &mdash; new, or an old one cleaned out. Look for <strong>HDPE</strong> (High-Density Polyethylene, recycling code #2); #4 (LDPE) works too but isn't as rigid. I cleaned out an old cleaning bottle for mine and labeled it clearly, as any old lab rat would. In fact, always label containers clearly if you're going to store something in them &mdash; it's just better for everyone, mostly you.</p>
+
+      <h2>What You'll Need</h2>
+
+      <ul>
+        <li>Cardboard (to protect the wheel and swingarm from overspray)</li>
+        <li>Two old rags &mdash; one for cleaning, one for the lube pass</li>
+        <li>A grunge brush &mdash; 3-sided is best (the Tirox Grunge Brush is the standard)</li>
+        <li>Kerosene in a labeled HDPE spray bottle</li>
+        <li>Chain lube &mdash; I'm using <strong>Maxima Chain Wax</strong> right now. Cheap, and highly recommended.</li>
+        <li>Nitrile gloves and decent ventilation (kerosene is a skin irritant, and the fumes aren't fun indoors)</li>
+      </ul>
+
+      <div class="supply-grid">
+        <figure class="article-figure">
+          <img src="{{ '/images/clean_lube/grunge_brush1.jpg' | relative_url }}" alt="A blue Tirox-style 3-sided grunge brush for motorcycle chains.">
+          <figcaption>3-sided grunge brush.</figcaption>
+        </figure>
+        <figure class="article-figure">
+          <img src="{{ '/images/clean_lube/Chain_wax.jpg' | relative_url }}" alt="A can of Maxima Chain Wax motorcycle chain lubricant.">
+          <figcaption>Maxima Chain Wax.</figcaption>
+        </figure>
+      </div>
+
+      <h2>The Procedure</h2>
+
+      <h3>1. Get the bike up</h3>
+
+      <p>Put the bike on a center stand or paddock stand &mdash; you need to be able to rotate the rear wheel freely.</p>
+
+      <figure class="article-figure">
+        <img src="{{ '/images/clean_lube/Paddock.jpg' | relative_url }}" alt="Rear of a motorcycle lifted on a paddock stand, with the chain visible.">
+        <figcaption>Paddock stand under the swingarm. Rear wheel spins freely.</figcaption>
+      </figure>
+
+      <h3>2. Protect the wheel</h3>
+
+      <p>Slide cardboard between the chain and the wheel to catch overspray. Kerosene on a brake rotor is a very bad time.</p>
+
+      <figure class="article-figure">
+        <img src="{{ '/images/clean_lube/Cardboard_behind_chain.jpg' | relative_url }}" alt="A piece of cardboard wedged between the chain and the rear wheel to block overspray.">
+        <figcaption>Cardboard between the chain and wheel &mdash; cheap insurance for your rotor and tire.</figcaption>
+      </figure>
+
+      <h3>3. Mark your starting point</h3>
+
+      <p>Either make a note of where on the chain you're starting, or find the <strong>paint mark</strong> many chains come with from the factory. Without a marker, you'll either miss a section or do a lap and a half for nothing.</p>
+
+      <figure class="article-figure narrow">
+        <img src="{{ '/images/clean_lube/paint_mark.jpg' | relative_url }}" alt="Close-up of a motorcycle chain showing a small factory paint mark on one of the side plates.">
+        <figcaption>Factory paint mark. Yours may be a different color &mdash; look for anything that isn't chain-coloured.</figcaption>
+      </figure>
+
+      <h3>4. Spray, brush, wipe</h3>
+
+      <p>Start spraying kerosene. After a round or two (depending on how dirty it is), work the grunge brush in. You should see gunk loosen up. Alternate spraying, brushing, and wiping with the rag until the chain is sparkling clean &mdash; no black gunk left. Ideally you want to see fresh metal.</p>
+
+      <figure class="article-figure">
+        <img src="{{ '/images/clean_lube/grunge_brush_onchain.jpg' | relative_url }}" alt="Grunge brush being worked around a motorcycle chain while the brush's three sides contact the chain simultaneously.">
+        <figcaption>Grunge brush working all three sides of the chain at once. Rotate the wheel through it slowly.</figcaption>
+      </figure>
+
+      <figure class="article-figure">
+        <img src="{{ '/images/clean_lube/CleanChain1.jpg' | relative_url }}" alt="A motorcycle chain after cleaning, showing bright metal with no visible grime.">
+        <figcaption>What you're aiming for. Fresh metal, no black.</figcaption>
+      </figure>
+
+      <h3>5. Wait</h3>
+
+      <p>Once it's clean, wait at least 20&ndash;30 minutes for the kerosene to fully evaporate before lubing. Longer if it's cool or humid out. Lube applied to wet kerosene just gets diluted and flung off.</p>
+
+      <h2>Lubing</h2>
+
+      <p>Same cardboard trick to protect the wheel. Apply your lube to the <strong>inner side</strong> of the chain &mdash; the side facing the sprockets &mdash; because that's where centrifugal force flings it onto the rollers and works it in. The outer side doesn't do any sliding work.</p>
+
+      <figure class="article-figure">
+        <img src="{{ '/images/clean_lube/where%20toLube_dia.jpg' | relative_url }}" alt="Diagram showing where to spray chain lube: on the inside of the chain run, aimed at the rollers where they meet the rear sprocket.">
+        <figcaption>Spray the inner face of the lower chain run, aimed at where the rollers meet the rear sprocket. Diagram: Maxima.</figcaption>
+      </figure>
+
+      <p>If you're on a non-sealed chain, use more lube and make sure it penetrates everywhere.</p>
+
+      <p>Give the wheel a few spins, wait 5&ndash;10 minutes for the solvent carrier in the lube to flash off, then wipe the excess clean. Excess lube only attracts grit.</p>
+
+      <h2>One More Thing</h2>
+
+      <p>If the chain's really filthy &mdash; mud, salt, that kind of thing &mdash; you may want to wash the bike (chain area included) with soap and water first, then follow up with kerosene. Just don't wash <em>after</em> lubing. Soap emulsifies oil, kerosene dissolves it, and all your work goes down the driveway. Keep soap, water, and kerosene away from a freshly lubed chain.</p>
+
+      <h2>How Often?</h2>
+
+      <ul>
+        <li>Street riding: every 300&ndash;600 miles</li>
+        <li>After every rain ride</li>
+        <li>After any off-road or gravel use</li>
+      </ul>
+
+      <p>Happy wrenching.</p>
+
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Wrench It Yourself (WIY)</p>
+  </footer>
+
+</body>
+</html>
