@@ -144,6 +144,36 @@
       margin-top: 3rem;
       padding-top: 1rem;
     }
+
+    /* Figure styling for article images */
+    .article-figure {
+      margin: 1.5rem auto;
+      text-align: center;
+      max-width: 600px;
+    }
+    .article-figure img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      background: #f5f0e8;
+      padding: 0.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .article-figure figcaption {
+      margin-top: 0.75rem;
+      font-size: 0.85rem;
+      color: #C5A067;
+      font-style: italic;
+      line-height: 1.5;
+      padding: 0 0.5rem;
+    }
+
+    .follow-up-note {
+      font-style: italic;
+      color: #C5A067;
+      opacity: 0.85;
+      margin-bottom: 1.5rem;
+    }
   </style>
 </head>
 <body>
@@ -178,6 +208,10 @@
           <li>
             <a href="#motorcycle-wind-chill">Motorcycle Wind Chill</a>
             <span class="desc">What really drops the "feels like" temperature at speed, with charts for shielded vs unshielded.</span>
+          </li>
+          <li>
+            <a href="#wind-the-real-enemy">Wind: The Real Enemy (and the Molecular Motor That Fights It)</a>
+            <span class="desc">ATP synthase, why down puffies fail at speed, and a near-miss on White Mountain Peak.</span>
           </li>
         </ul>
       </section>
@@ -309,7 +343,52 @@
          <p>Now all this is great, but real world I'm probably just going to put on a thermal and, now that I have panniers, store a jacket or something. And I have gotten near hypothermic on a bike. That was in California, going from San Jose over the mountain to Santa Cruz and the ocean. Guess what the factor was: ocean wind.</p>
 
          <p>Happy riding.</p>
-        
+
+        <p class="back-to-top"><a href="#articles-list">&uarr; Back to top</a></p>
+      </article>
+
+      <article id="wind-the-real-enemy">
+        <h2>Wind: The Real Enemy (and the Molecular Motor That Fights It)</h2>
+
+        <p class="follow-up-note">A follow-up to the <a href="#motorcycle-wind-chill">Motorcycle Wind Chill</a> piece.</p>
+
+        <p>So on my last piece I gave a breakdown of windchill factors and things to consider while riding and layering up. What I didn't talk about was the real enemy here: wind. Wind robs the body of the precious little layer of heat around us that keeps us at a constant temperature. We're warm-blooded, so we thermoregulate — we send signals to start turning food (or later, fat) into energy as ATP (adenosine triphosphate). This actually drives a gear in a cell to make power, no shit. Here's a more detailed look at that — skip it if your brain is melting.</p>
+
+        <h3>ATP Synthase: The Molecular Motor</h3>
+
+        <div class="ai-explainer">
+          <p>AI on the biochemistry:</p>
+          <ul>
+            <li><strong>The Setup (the water tank):</strong> Cellular respiration uses electron transport chains to pump hydrogen ions (H⁺) across a membrane in your mitochondria, creating a high-concentration crowd on one side. This creates an electrochemical gradient — essentially a biological battery.</li>
+            <li><strong>The Turbine (the rotor):</strong> The protons want to diffuse back to where they're less crowded, but the membrane blocks them. The only door back across is through a specialized protein complex called ATP synthase. As protons rush through a channel in its base, they physically push against a ring of protein subunits, causing that whole bottom ring to spin.</li>
+            <li><strong>The Crankshaft and Clamping Head:</strong> Sticking out of that spinning base is an asymmetric, off-center shaft (the gamma subunit) that reaches up into a stationary catalytic head. As the shaft rotates, it acts like an eccentric crankshaft, physically warping and compressing the surrounding protein pockets.</li>
+            <li><strong>The Yield:</strong> That mechanical squeezing forces adenosine diphosphate (ADP) and a loose phosphate group together, snapping them into a high-energy ATP molecule.</li>
+          </ul>
+        </div>
+
+        <figure class="article-figure">
+          <img src="{{ '/images/atp-synthase.png' | relative_url }}" alt="Diagram of ATP synthase embedded in a cell membrane. Protons (H+) flow from outside the membrane through the c10 rotor at the base, driving the gamma subunit (y) that rotates inside the stationary catalytic head (alpha and beta subunits), producing ATP from ADP + Pi.">
+          <figcaption>Structure of ATP synthase. Protons (H⁺) flow from outside through the c₁₀ rotor at the base; the spinning rotor drives the asymmetric γ (gamma) shaft, which squeezes the α/β catalytic head to snap ADP + Pᵢ into ATP.</figcaption>
+        </figure>
+
+        <p>So when you picture a tiny molecular motor spinning at high speeds to crank out chemical energy, you're picturing reality. (Nobel Prize work — Boyer and Walker, 1997, if you want to go deeper.) The point being: we're all machines, deep down.</p>
+
+        <h3>Back to the Wind</h3>
+
+        <p>So however fascinating that is, the wind robbing us of heat is really what we're trying to protect ourselves from. Having a wind-resistant or windproof layer is key — plus some insulation to keep you warm. Cold is a different beast, and requires insulation layers; of course the colder it gets, the more insulation you need. But where your trusty down puffy will fail you is that it's not windproof — wind blows up under the hem, through the cuffs, and out the neck, taking your heat with it.</p>
+
+        <h3>A Cautionary Tale: White Mountain Peak</h3>
+
+        <p>Now, I have cold-weather experience like most Americans. But where I really learned this lesson was alpine climbing. One particular mountain had a road most of the way to the top — <a href="https://en.wikipedia.org/wiki/White_Mountain_Peak" target="_blank" rel="noopener">White Mountain Peak</a>, the third-highest peak in California (after Whitney and Williamson) and the highest peak outside the Sierra Nevada range.</p>
+
+        <p>The road is gated about seven miles from the summit at around 11,680 ft, which officially makes this "California's easiest 14er." Easy is relative. At 14,252 ft and coming from sea-level altitude, it was not so easy. I didn't make it to the top. I had layers on, but winds were easily 40–50 mph, I was too late getting my puffy on, I experienced acute altitude sickness, ran out of water, and had mild hallucinations from getting hypothermic before I made it back to the Barcroft research station. All from wind.</p>
+
+        <p>I made some bad decisions that day — trying to summit at all, and trusting some friends I shouldn't have. It turned out okay because I decided to turn back. But I'd be reminded of that lesson again and again.</p>
+
+        <h3>The Takeaway for Riding</h3>
+
+        <p>So as you're riding, pack a rain jacket and pants. You need to block the wind, and they do a great job. Or have good layers. Even heated vests and gloves won't really work unless they also wind-block. Ride safe, stay warm.</p>
+
         <p class="back-to-top"><a href="#articles-list">&uarr; Back to top</a></p>
       </article>
 
